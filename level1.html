@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Level 1</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: 'Mogul Bulka';
+      text-align: center;
+      background-image: url(Back.jpg);;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 800px 2200px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    #wordWithMissingLetter {
+      font-size: 70px;
+      /* margin-bottom: 20px; */
+      text-align: center;
+    }
+
+    #letters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 50px;
+    }
+
+    button {
+      font-size: 70px;
+      padding: 15px 30px;
+      align-items: center;
+      background-image: url(USEG\ BACK.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 190px 190px;
+      border-radius: 30px;
+      height: 150px;
+      width: 150px;
+      border: none;
+      background-color: transparent;
+      color: aliceblue;
+      margin: 0 40px;
+      font-family: 'Mogul Bulka';
+    }
+
+    #retryButtonContainer {
+      justify-content: center;
+    }
+
+    .Zurag{
+        height: 200px;
+        width: 200px;
+        margin-bottom: -40px;
+    }
+
+    #buttonContainer {
+      margin: 0 auto;
+      width: max-content;
+      margin-top: 20px;
+    }
+    
+    .textarea{
+      background-image: url(textback.png);
+      background-size: 700px 150px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 680px;
+      height: 160px;
+      display: flex; /* Use flexbox layout */
+      align-items: center; /* Center vertically */
+      justify-content: center;
+      margin: 60px 0;
+      color: aliceblue;
+      text-align: center;
+    }
+
+    .backb{
+      height: 130px;
+      width: 130px;
+      background-image: url(lvl\ button.png);
+      background-size: 100px 100px;
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .backbd{
+      margin-bottom : 20px;
+    }
+
+    #nextButton{
+      background-image: url(NEXT.png);
+      background-size: 150px 150px;
+      margin-top: 50px;
+    }
+
+    #retryButton{
+      background-image: url(RETRY.png);
+      background-size: 150px 150px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="backbd">
+    <button class="backb" onclick="backhome()">ҮЕ</button>
+  </div>
+  <img class="Zurag" id="image" src="sar.png" alt="sar">
+  <div class="textarea">
+    <p id="wordWithMissingLetter">С _ Р</p>
+  </div>
+  <div id="letters">
+    <button onclick="chooseLetter('О')">О</button>
+    <button onclick="chooseLetter('А')">А</button>
+    <button onclick="chooseLetter('Ө')">Ө</button>
+  </div>
+  <div id="letters">
+    <button onclick="chooseLetter('Э')">Э</button>
+    <button onclick="chooseLetter('У')">У</button>
+  </div>
+  <div id="buttonContainer">
+    <button id="retryButton" style="display: none;" onclick="retryLevel()"></button>
+    <button id="nextButton" style="display: none;" onclick="nextLevel()"></button>
+  </div>
+
+  <script>
+    let incorrectWord = "С А Р";
+    let correctLetter = "А";
+
+    function chooseLetter(letter) {
+      if (letter === correctLetter) {
+        incorrectWord = incorrectWord.replace('_', letter);
+        document.getElementById("wordWithMissingLetter").textContent = incorrectWord;
+        document.getElementById("nextButton").style.display = "block";
+        document.getElementById("retryButton").style.display = "none";
+      } else {
+        document.getElementById("retryButton").style.display = "block";
+        document.getElementById("nextButton").style.display = "none";
+      }
+    }
+
+    function retryLevel() {
+      window.location.reload(); // Reload the current page to retry the level
+    }
+
+    function nextLevel() {
+      window.location.href = "level2.html"; // Navigate to the next level page
+    }
+    function backhome() {
+      window.location.href = "levels.html"; // Navigate to the first level page
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЭХЛЭХ</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif; /* Specify a font family that supports Cyrillic characters */
+      text-align: center;
+      background-image: url(Back.jpg);;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 800px 1400px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      font-size: 100px;
+      text-align: center;
+      color: aliceblue;
+      padding: 15px 30px;
+      width: 600px;
+      height: 150px;
+      border-radius: 40px;
+      background-image: url(button.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 650px 200px;
+      border: none;
+    }
+
+    #buttonContainer {
+      margin: 0 auto;
+      width: max-content;
+      margin-top: 500px;
+    }
+
+    .Logo{
+        margin-top: 200px;
+        height: 350px;
+        width: 700px;
+    }
+
+  </style>
+</head>
+<body>
+    <img class="Logo" src="ном нүүр.png" alt="лого">
+  <div id="buttonContainer">
+    <button  onclick="startGame()">Эхлэх</button>
+  </div>
+
+  <script>
+    function startGame() {
+      window.location.href = "levels.html"; // Navigate to the first level page
+    }
+  </script>
+</body>
+</html>
