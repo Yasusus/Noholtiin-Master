@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Level 1</title>
+  <title>Level 2</title>
   <style>
     /* Add your CSS styles here */
-    body {
-      font-family: 'Mogul Bulka';
+    body , html{
+      font-family: Arial, sans-serif, aliceblue; /* Specify a font family that supports Cyrillic characters */
       text-align: center;
-      /* background-image: url(Back.jpg);;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 800px 2200px; */
+      margin: 0;
+    padding: 0;
+    height: 101%;
+    align-items: center;
     }
+
+    .full-screen-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(Back.jpg); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+}
 
     h1 {
       font-size: 32px;
@@ -22,43 +29,47 @@
     }
 
     #wordWithMissingLetter {
-      font-size: 70px;
-      /* margin-bottom: 20px; */
-      text-align: center;
+      font-size: 48px;
+      color: aliceblue;
+      border: none;
+      border-radius: 25px;
+      background-color: brown;
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;
+      padding: 2%;
     }
 
+    .TEXTAREA{
+      height: 10%;
+      width: 100%;
+      display: flex; /* Use flexbox layout */
+      justify-content: center; /* Center horizontally */
+      align-items: center;
+      margin-bottom: 5%;
+      margin-top: 15%;
+    }
     #letters {
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin-top: 50px;
     }
 
     button {
-      font-size: 70px;
+      font-size: 24px;
       padding: 15px 30px;
-      align-items: center;
+      border-radius: 30px;
       background-image: url(USEG\ BACK.png);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 190px 190px;
-      border-radius: 30px;
-      height: 150px;
-      width: 150px;
+      background-size: 120% 120%;
+      color: aliceblue;
       border: none;
       background-color: transparent;
-      color: aliceblue;
-      margin: 0 40px;
-      font-family: 'Mogul Bulka';
     }
-
-    #retryButtonContainer {
-      justify-content: center;
-    }
-
     .Zurag{
-        height: 200px;
-        width: 200px;
+        height: 150px;
+        width: 150px;
         margin-bottom: -40px;
     }
 
@@ -67,74 +78,70 @@
       width: max-content;
       margin-top: 20px;
     }
-    
-    .textarea{
-      background-image: url(textback.png);
-      background-size: 700px 150px;
+
+    #retryButton{
+      font-size: 26px;
+      background-image: url(RETRY.png);
       background-repeat: no-repeat;
       background-position: center;
-      width: 680px;
-      height: 160px;
-      display: flex; /* Use flexbox layout */
-      align-items: center; /* Center vertically */
-      justify-content: center;
-      margin: 60px 0;
-      color: aliceblue;
-      text-align: center;
-    }
-
-    .backb{
-      height: 130px;
-      width: 130px;
-      background-image: url(lvl\ button.png);
-      background-size: 100px 100px;
-      font-size: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .backbd{
-      margin-bottom : 20px;
+      background-size: 100% 100%;
+      color: transparent;
+      border: none;
     }
 
     #nextButton{
+      font-size: 26px;
       background-image: url(NEXT.png);
-      background-size: 150px 150px;
-      margin-top: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      color: transparent;
+      border: none;
     }
 
-    #retryButton{
-      background-image: url(RETRY.png);
-      background-size: 150px 150px;
-      margin-top: 50px;
+    .backb{
+      background-image: url(lvl\ button.png);
+      font-size: 26px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      color:aliceblue;
+      border: none;
+    }
+
+    .backbd{
+      margin-bottom : 2%;
+      margin-left: 2%;
+      align-items: left;
+      padding-top: 2%;
     }
   </style>
 </head>
 <body>
-  <div class="backbd">
-    <button class="backb" onclick="backhome()">ҮЕ</button>
-  </div>
-  <img class="Zurag" id="image" src="sar.png" alt="sar">
-  <div class="textarea">
-    <p id="wordWithMissingLetter">С _ Р</p>
+  <div class="full-screen-image">
+    <div class="backbd">
+      <button class="backb" onclick="backhome()">ҮЕ</button>
+    </div>
+  <img class="Zurag" id="image" src="sar.png" alt="Moon">
+  <DIV class="TEXTAREA">
+    <p id="wordWithMissingLetter">С_А</p>
+  </DIV>
+  <div id="letters">
+    <button onclick="chooseLetter('Ж')">О</button>
+    <button onclick="chooseLetter('З')">Ж</button>
+    <button onclick="chooseLetter('Т')">А</button>
   </div>
   <div id="letters">
-    <button onclick="chooseLetter('О')">О</button>
-    <button onclick="chooseLetter('А')">А</button>
-    <button onclick="chooseLetter('Ө')">Ө</button>
-  </div>
-  <div id="letters">
-    <button onclick="chooseLetter('Э')">Э</button>
-    <button onclick="chooseLetter('У')">У</button>
+    <button onclick="chooseLetter('Ф')">Т</button>
+    <button onclick="chooseLetter('А')" onclick="playSound('correctsoundd.mp3', 'incorrect.mp3', true)">Х</button>
   </div>
   <div id="buttonContainer">
-    <button id="retryButton" style="display: none;" onclick="retryLevel()"></button>
-    <button id="nextButton" style="display: none;" onclick="nextLevel()"></button>
+    <button id="retryButton" style="display: none;" onclick="retryLevel()">1</button>
+    <button id="nextButton" style="display: none;" onclick="nextLevel()">1</button>
   </div>
 
   <script>
-    let incorrectWord = "С А Р";
+    let incorrectWord = "САР";
     let correctLetter = "А";
 
     function chooseLetter(letter) {
@@ -149,6 +156,12 @@
       }
     }
 
+    function playSound(correctSoundFile, incorrectSoundFile, isCorrect) {
+  const soundFile = isCorrect ? correctSoundFile : incorrectSoundFile;
+  const audio = new Audio(soundFile);
+  audio.play();
+}
+
     function retryLevel() {
       window.location.reload(); // Reload the current page to retry the level
     }
@@ -156,9 +169,12 @@
     function nextLevel() {
       window.location.href = "level2.html"; // Navigate to the next level page
     }
+
     function backhome() {
       window.location.href = "levels.html"; // Navigate to the first level page
     }
   </script>
+  </div>
+    
 </body>
 </html>
