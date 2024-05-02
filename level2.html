@@ -7,11 +7,11 @@
   <style>
     /* Add your CSS styles here */
     body , html{
-      font-family: Arial, sans-serif; /* Specify a font family that supports Cyrillic characters */
+      font-family: Arial, sans-serif, aliceblue; /* Specify a font family that supports Cyrillic characters */
       text-align: center;
       margin: 0;
     padding: 0;
-    height: 100%;
+    height: 110%;
     }
 
     .full-screen-image {
@@ -47,6 +47,7 @@
       background-position: center;
       background-size: 120% 120%;
       color: aliceblue;
+      border: none;
     }
     .Zurag{
         height: 150px;
@@ -63,6 +64,24 @@
     .Logo{
       max-width: 100%; /* Make image responsive */
       height: auto;
+    }
+
+    #retryButton{
+      background-image: url(RETRY.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 120% 120%;
+      color: aliceblue;
+      border: none;
+    }
+
+    #nextButton{
+      background-image: url(NEXT.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 120% 120%;
+      color: aliceblue;
+      border: none;
     }
   </style>
 </head>
@@ -81,8 +100,8 @@
     <button onclick="chooseLetter('Х')">Х</button>
   </div>
   <div id="buttonContainer">
-    <button id="retryButton" style="display: none;" onclick="retryLevel()">Дахин оролдох</button>
-    <button id="nextButton" style="display: none;" onclick="nextLevel()">Дараагийн</button>
+    <button id="retryButton" style="display: none;" onclick="retryLevel()"></button>
+    <button id="nextButton" style="display: none;" onclick="nextLevel()"></button>
   </div>
 
   <script>
