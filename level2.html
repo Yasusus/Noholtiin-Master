@@ -101,11 +101,12 @@
 
     .backb{
       background-image: url(lvl\ button.png);
-      background-size: 100% 100%;
       font-size: 26px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      color:aliceblue;
+      border: none;
     }
 
     .backbd{
@@ -114,10 +115,10 @@
   </style>
 </head>
 <body>
-  <div class="backbd">
-    <button class="backb" onclick="backhome()">ҮЕ</button>
-  </div>
   <div class="full-screen-image">
+    <div class="backbd">
+      <button class="backb" onclick="backhome()">ҮЕ</button>
+    </div>
   <img class="Zurag" id="image" src="Dog.png" alt="Dog">
   <DIV class="TEXTAREA">
     <p id="wordWithMissingLetter">НО_ОЙ</p>
