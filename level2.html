@@ -132,7 +132,7 @@
   </div>
   <div id="letters">
     <button onclick="chooseLetter('Т')">Т</button>
-    <button onclick="chooseLetter('Х')">Х</button>
+    <button onclick="chooseLetter('Х')" onclick="playSound('correctsoundd.mp3', 'incorrect.mp3', true)">Х</button>
   </div>
   <div id="buttonContainer">
     <button id="retryButton" style="display: none;" onclick="retryLevel()">1</button>
@@ -154,6 +154,12 @@
         document.getElementById("nextButton").style.display = "none";
       }
     }
+
+    function playSound(correctSoundFile, incorrectSoundFile, isCorrect) {
+  const soundFile = isCorrect ? correctSoundFile : incorrectSoundFile;
+  const audio = new Audio(soundFile);
+  audio.play();
+}
 
     function retryLevel() {
       window.location.reload(); // Reload the current page to retry the level
