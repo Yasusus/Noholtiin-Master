@@ -69,6 +69,7 @@
     }
 
     #retryButton{
+      font-size: 24px;
       background-image: url(RETRY.png);
       background-repeat: no-repeat;
       background-position: center;
@@ -82,7 +83,7 @@
       background-image: url(NEXT.png);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 120% 120%;
+      background-size: 100% 100%;
       color: aliceblue;
       border: none;
     }
@@ -103,8 +104,8 @@
     <button onclick="chooseLetter('Х')">Х</button>
   </div>
   <div id="buttonContainer">
-    <button id="retryButton" style="display: none;" onclick="retryLevel()"></button>
-    <button id="nextButton" style="display: none;" onclick="nextLevel()"></button>
+    <button id="retryButton" style="display: none;" onclick="retryLevel()">1</button>
+    <button id="nextButton" style="display: none;" onclick="nextLevel()">1</button>
   </div>
 
   <script>
