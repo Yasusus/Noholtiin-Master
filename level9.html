@@ -3,13 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Level 9</title>
+  <title>Level 2</title>
   <style>
     /* Add your CSS styles here */
-    body {
-      font-family: Arial, sans-serif; /* Specify a font family that supports Cyrillic characters */
+    body , html{
+      font-family: Arial, sans-serif, aliceblue; /* Specify a font family that supports Cyrillic characters */
       text-align: center;
+      margin: 0;
+    padding: 0;
+    height: 101%;
+    align-items: center;
     }
+
+    .full-screen-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(Back.jpg); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+}
 
     h1 {
       font-size: 32px;
@@ -18,9 +30,25 @@
 
     #wordWithMissingLetter {
       font-size: 48px;
-      margin-bottom: 20px;
+      color: aliceblue;
+      border: none;
+      border-radius: 25px;
+      background-color: brown;
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;
+      padding: 2%;
     }
 
+    .TEXTAREA{
+      height: 10%;
+      width: 100%;
+      display: flex; /* Use flexbox layout */
+      justify-content: center; /* Center horizontally */
+      align-items: center;
+      margin-bottom: 5%;
+      margin-top: 15%;
+    }
     #letters {
       display: flex;
       justify-content: center;
@@ -30,6 +58,14 @@
     button {
       font-size: 24px;
       padding: 15px 30px;
+      border-radius: 30px;
+      background-image: url(USEG\ BACK.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 120% 120%;
+      color: aliceblue;
+      border: none;
+      background-color: transparent;
     }
     .Zurag{
         height: 150px;
@@ -42,23 +78,66 @@
       width: max-content;
       margin-top: 20px;
     }
+
+    #retryButton{
+      font-size: 26px;
+      background-image: url(RETRY.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      color: transparent;
+      border: none;
+    }
+
+    #nextButton{
+      font-size: 26px;
+      background-image: url(NEXT.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      color: transparent;
+      border: none;
+    }
+
+    .backb{
+      background-image: url(lvl\ button.png);
+      font-size: 26px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      color:aliceblue;
+      border: none;
+    }
+
+    .backbd{
+      margin-bottom : 2%;
+      margin-left: 2%;
+      align-items: left;
+      padding-top: 2%;
+    }
   </style>
 </head>
 <body>
-  <h1>Нөхөлтийн мастер</h1>
-  <h2>Давхарга 9:</h2>
+  <div class="full-screen-image">
+    <div class="backbd">
+      <button class="backb" onclick="backhome()">ҮЕ</button>
+    </div>
   <img class="Zurag" id="image" src="Ger.png" alt="ger">
-  <p id="wordWithMissingLetter">Г_Р</p>
+  <DIV class="TEXTAREA">
+    <p id="wordWithMissingLetter">Г_Р</p>
+  </DIV>
   <div id="letters">
     <button onclick="chooseLetter('О')">О</button>
     <button onclick="chooseLetter('А')">А</button>
     <button onclick="chooseLetter('Э')">Э</button>
+  </div>
+  <div id="letters">
     <button onclick="chooseLetter('П')">П</button>
     <button onclick="chooseLetter('У')">У</button>
   </div>
   <div id="buttonContainer">
-    <button id="retryButton" style="display: none;" onclick="retryLevel()">Дахин оролдох</button>
-    <button id="nextButton" style="display: none;" onclick="nextLevel()">Дараагийн</button>
+    <button id="retryButton" style="display: none;" onclick="retryLevel()">1</button>
+    <button id="nextButton" style="display: none;" onclick="nextLevel()">1</button>
   </div>
 
   <script>
@@ -77,6 +156,12 @@
       }
     }
 
+    function playSound(correctSoundFile, incorrectSoundFile, isCorrect) {
+  const soundFile = isCorrect ? correctSoundFile : incorrectSoundFile;
+  const audio = new Audio(soundFile);
+  audio.play();
+}
+
     function retryLevel() {
       window.location.reload(); // Reload the current page to retry the level
     }
@@ -84,6 +169,12 @@
     function nextLevel() {
       window.location.href = "level10.html"; // Navigate to the next level page
     }
+
+    function backhome() {
+      window.location.href = "levels.html"; // Navigate to the first level page
+    }
   </script>
+  </div>
+    
 </body>
 </html>
