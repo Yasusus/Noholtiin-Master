@@ -49,7 +49,7 @@ const movesCounter = () => {
   moves.innerHTML = `<span>Moves:</span>${movesCount}`;
 };
 //Pick random objects from the items array
-const generateRandom = (size = 4) => {
+const generateRandom = (size = 1) => {
   //temporary array
   let tempArray = [...items];
   //initializes cardValues array
