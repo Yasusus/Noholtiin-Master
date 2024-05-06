@@ -12,12 +12,12 @@ let secondCard = false;
 //Items array
 const items = [
   { name: "A", image: "A.png" },
-  { name: "crocodile", image: "crocodile.png" },
-  { name: "macaw", image: "macaw.png" },
-  { name: "gorilla", image: "gorilla.png" },
-  { name: "tiger", image: "tiger.png" },
-  { name: "monkey", image: "monkey.png" },
-  { name: "chameleon", image: "chameleon.png" },
+  { name: "crocodile", image: "sar.png" },
+  { name: "macaw", image: "lion.png" },
+  { name: "gorilla", image: "snake.png" },
+  { name: "tiger", image: "Bear.png" },
+  { name: "monkey", image: "Dog.png" },
+  { name: "chameleon", image: "Ger.png" },
   { name: "piranha", image: "piranha.png" },
   { name: "anaconda", image: "anaconda.png" },
   { name: "sloth", image: "sloth.png" },
