@@ -132,8 +132,8 @@
     <button onclick="chooseLetter('Т')">Т</button>
   </div>
   <div id="letters">
-    <button onclick="chooseLetter('Ф')">Ф</button>
-    <button onclick="chooseLetter('А')" onclick="playSound('correctsoundd.mp3', 'incorrect.mp3', true)">А</button>
+    <button onclick="chooseLetter('А')">А</button>
+    <button onclick="chooseLetter('Ф')" onclick="playSound('correctsoundd.mp3', 'incorrect.mp3', true)">Ф</button>
   </div>
   <div id="buttonContainer">
     <button id="retryButton" style="display: none;" onclick="retryLevel()">1</button>
@@ -141,7 +141,7 @@
   </div>
 
   <script>
-    let incorrectWord = "Нар";
+    let incorrectWord = "НАР";
     let correctLetter = "А";
 
     function chooseLetter(letter) {
